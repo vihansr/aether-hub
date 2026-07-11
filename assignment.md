@@ -1,6 +1,6 @@
 *This is a submission for [Weekend Challenge: Passion Edition](https://dev.to/challenges/weekend-2026-07-09)*
 
-# Aether Hub: The Unified Life Protocol Dashboard ⚡✨
+# Aether Hub: Your Go-to Logger for Everyday Activities
 
 ---
 
@@ -8,7 +8,7 @@
 
 When pursuing passionate self-improvement—whether it's hypertrophy fitness, optimal daily nutrition, deep sleep architecture, or building technical projects—our tools often become fragmented across five different apps. 
 
-I built **Aether Hub**, a stunning, luxury-designed **Unified Life Protocol Dashboard** that brings holistic life tracking under one cohesive, beautifully animated command center.
+I built **Aether Hub** which tracks your **Everyday Activity** for you to review and retrospect at the end of the day.
 
 ### Core Features of Aether Hub:
 - **Radial Command Center**: An interactive overview menu providing instant visual telemetry across all life sectors before you even click into a module.
@@ -26,6 +26,8 @@ I built **Aether Hub**, a stunning, luxury-designed **Unified Life Protocol Dash
 ---
 
 ## Demo
+
+**Live Application**: [https://aether-hub-rosy.vercel.app](https://aether-hub-rosy.vercel.app)
 
 ### System Overview Architecture
 

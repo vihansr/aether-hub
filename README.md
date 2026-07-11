@@ -2,6 +2,8 @@
 
 A production-grade, modular life management application engineered with React 19, TypeScript, Vite, and PostgreSQL. Designed as a unified command center for personal productivity, physical fitness, sleep recovery architecture, daily hydration, and multi-format knowledge capture.
 
+**Live Application**: [https://aether-hub-rosy.vercel.app](https://aether-hub-rosy.vercel.app)
+
 ---
 
 ## Executive Summary
@@ -14,6 +16,27 @@ Aether Hub addresses the problem of fragmented productivity tools by consolidati
 4. **Nutrition & Hydration Protocol**: Real-time water intake tracking against customizable daily targets (default 2500ml) paired with structured meal logging.
 5. **Sleep Recovery Architecture**: Sleep duration monitoring, star-rated subjective recovery metrics, bed/wake timestamps, and rest notes.
 6. **Task & Priority Manager**: Categorized daily task management with priority badges and completion filtering.
+
+---
+
+## Application Interface & Screenshots
+
+### Command Center Overview
+![Main Command Center](./screenshots/main-screen.png)
+
+### Core Protocol Modules
+
+| Task & Habit Tracker | Multi-Format Notes Vault |
+| :---: | :---: |
+| ![Task Tracker](./screenshots/task-tracker.png) | ![Notes Vault](./screenshots/notes-vault.png) |
+
+| Fitness & Workout Log | Hydration & Nutrition Tracker |
+| :---: | :---: |
+| ![Fitness Tracker](./screenshots/fitness-tracker.png) | ![Water Tracker](./screenshots/water-tracker.png) |
+
+| Sleep Recovery Log | Daily Calendar Schedule |
+| :---: | :---: |
+| ![Sleep Tracker](./screenshots/sleep-tracker.png) | ![Calendar Schedule](./screenshots/calender.png) |
 
 ---
 
