@@ -1,0 +1,6 @@
+{
+  "name": "Activity Tracker Dashboard",
+  "description": "A single-place life tracker featuring a CSGO-style radial quick-navigation menu for To-Dos, Notes, Calendar, Fitness, Food & Water, and Sleep tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

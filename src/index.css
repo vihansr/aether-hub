@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.45);
+}
+
+/* Specific CSGO-style radial properties if needed */
+.radial-sector {
+  clip-path: polygon(50% 50%, var(--clip-p1) var(--clip-p2), var(--clip-p3) var(--clip-p4));
+}
+
+/* ==========================================
+   Luxury Dark Mode Overrides (Antique Gold & Charcoal)
+   ========================================== */
+.dark {
+  --bg-primary: #121110;
+  --text-primary: #eae6db;
+  --panel-bg: #1c1a18;
+  --border-primary: rgba(205, 164, 94, 0.25);
+  --accent-gold: #cda45e;
+}
+
+/* Global body & backgrounds */
+.dark body,
+.dark #app-viewport,
+.dark .bg-\[\#faf8f5\] {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark .bg-\[\#ffffff\] {
+  background-color: var(--panel-bg) !important;
+}
+
+/* Semi-transparent panel overlays */
+.dark .bg-\[\#ffffff\]\/90 {
+  background-color: rgba(28, 26, 24, 0.9) !important;
+}
+
+.dark .bg-\[\#faf8f5\]\/80 {
+  background-color: rgba(18, 17, 16, 0.8) !important;
+}
+
+.dark .bg-\[\#faf8f5\]\/50 {
+  background-color: rgba(18, 17, 16, 0.5) !important;
+}
+
+.dark .bg-\[\#faf8f5\]\/60 {
+  background-color: rgba(18, 17, 16, 0.6) !important;
+}
+
+/* Inputs & boxes */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #121110 !important;
+  color: #eae6db !important;
+  border-color: rgba(205, 164, 94, 0.3) !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: var(--accent-gold) !important;
+}
+
+/* Text Primary */
+.dark .text-\[\#2d2a26\] {
+  color: var(--text-primary) !important;
+}
+
+/* Borders */
+.dark .border-\[\#b08b46\]\/10 {
+  border-color: rgba(205, 164, 94, 0.15) !important;
+}
+.dark .border-\[\#b08b46\]\/15 {
+  border-color: rgba(205, 164, 94, 0.22) !important;
+}
+.dark .border-\[\#b08b46\]\/20 {
+  border-color: rgba(205, 164, 94, 0.3) !important;
+}
+.dark .border-\[\#b08b46\]\/30 {
+  border-color: rgba(205, 164, 94, 0.45) !important;
+}
+.dark .border-\[\#b08b46\]\/40 {
+  border-color: rgba(205, 164, 94, 0.55) !important;
+}
+
+/* Text opacity overrides */
+.dark .text-\[\#2d2a26\]\/30 {
+  color: rgba(234, 230, 219, 0.3) !important;
+}
+.dark .text-\[\#2d2a26\]\/40 {
+  color: rgba(234, 230, 219, 0.4) !important;
+}
+.dark .text-\[\#2d2a26\]\/45 {
+  color: rgba(234, 230, 219, 0.45) !important;
+}
+.dark .text-\[\#2d2a26\]\/50 {
+  color: rgba(234, 230, 219, 0.5) !important;
+}
+.dark .text-\[\#2d2a26\]\/55 {
+  color: rgba(234, 230, 219, 0.55) !important;
+}
+.dark .text-\[\#2d2a26\]\/60 {
+  color: rgba(234, 230, 219, 0.6) !important;
+}
+.dark .text-\[\#2d2a26\]\/70 {
+  color: rgba(234, 230, 219, 0.7) !important;
+}
+.dark .text-\[\#2d2a26\]\/75 {
+  color: rgba(234, 230, 219, 0.75) !important;
+}
+.dark .text-\[\#2d2a26\]\/85 {
+  color: rgba(234, 230, 219, 0.85) !important;
+}
+
+/* Accent Gold colors */
+.dark .text-\[\#b08b46\] {
+  color: var(--accent-gold) !important;
+}
+.dark .bg-\[\#b08b46\] {
+  background-color: var(--accent-gold) !important;
+}
+.dark .border-\[\#b08b46\] {
+  border-color: var(--accent-gold) !important;
+}
+
+/* Background Opacities for Gold */
+.dark .bg-\[\#b08b46\]\/5 {
+  background-color: rgba(205, 164, 94, 0.08) !important;
+}
+.dark .bg-\[\#b08b46\]\/10 {
+  background-color: rgba(205, 164, 94, 0.15) !important;
+}
+.dark .bg-\[\#b08b46\]\/20 {
+  background-color: rgba(205, 164, 94, 0.25) !important;
+}
+
+/* Hover effects */
+.dark .hover\:text-\[\#b08b46\]:hover {
+  color: var(--accent-gold) !important;
+}
+.dark .hover\:bg-\[\#b08b46\]\/5:hover {
+  background-color: rgba(205, 164, 94, 0.08) !important;
+}
+.dark .hover\:border-\[\#b08b46\]:hover {
+  border-color: var(--accent-gold) !important;
+}
+
+/* CSGO-style Radial Menu Overrides */
+.dark #wheel-center-pane {
+  background-color: var(--panel-bg) !important;
+  border-color: var(--accent-gold) !important;
+  box-shadow: 0 4px 25px rgba(205, 164, 94, 0.08) !important;
+}
+
+.dark #wheel-svg path {
+  fill: rgba(28, 26, 24, 0.95) !important;
+  stroke: rgba(205, 164, 94, 0.25) !important;
+}
+
+.dark #wheel-svg path:hover {
+  fill: rgba(205, 164, 94, 0.12) !important;
+  stroke: var(--accent-gold) !important;
+}
+
+.dark #quick-links-grid button {
+  background-color: rgba(28, 26, 24, 0.9) !important;
+  border-color: rgba(205, 164, 94, 0.15) !important;
+}
+
+.dark #quick-links-grid button:hover {
+  border-color: rgba(205, 164, 94, 0.4) !important;
+  background-color: rgba(205, 164, 94, 0.05) !important;
+}
+
+/* Miscellaneous element overrides */
+.dark header {
+  background-color: rgba(18, 17, 16, 0.8) !important;
+}
+
+.dark footer {
+  background-color: var(--bg-primary) !important;
+}
+
+.dark #logo-button div {
+  background-color: var(--bg-primary) !important;
+  border-color: rgba(205, 164, 94, 0.3) !important;
+}
+
+.dark #quick-swapper {
+  background-color: var(--bg-primary) !important;
+  border-color: rgba(205, 164, 94, 0.15) !important;
+}
+
+.dark #quick-swapper svg {
+  color: var(--text-primary) !important;
+}
+
+.dark #quick-swapper div {
+  color: var(--accent-gold) !important;
+}
+
+.dark #active-category-container {
+  background-color: rgba(28, 26, 24, 0.9) !important;
+  box-shadow: 0 4px 30px rgba(205, 164, 94, 0.04) !important;
+}
+
+.dark #back-to-menu-btn {
+  background-color: rgba(18, 17, 16, 0.8) !important;
+  border-color: rgba(205, 164, 94, 0.15) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark #back-to-menu-btn:hover {
+  border-color: rgba(205, 164, 94, 0.45) !important;
+}
