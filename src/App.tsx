@@ -29,6 +29,7 @@ import { CalendarSection } from './components/CalendarSection';
 import { FitnessSection } from './components/FitnessSection';
 import { FoodWaterSection } from './components/FoodWaterSection';
 import { SleepSection } from './components/SleepSection';
+import { EraseDataModal } from './components/EraseDataModal';
 
 /**
  * Main Application Viewport
@@ -36,6 +37,7 @@ import { SleepSection } from './components/SleepSection';
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<CategoryType | null>(null);
   const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
+  const [isEraseModalOpen, setIsEraseModalOpen] = useState(false);
 
   // Application Hooks
   const { theme, toggleTheme } = useTheme();
@@ -74,7 +76,7 @@ export default function App() {
         onOpenSyncModal={() => setIsSyncModalOpen(true)}
         theme={theme}
         onToggleTheme={toggleTheme}
-        onClearAllData={state.handleClearAllStorage}
+        onClearAllData={() => setIsEraseModalOpen(true)}
       />
 
       {/* Main Container */}
@@ -217,6 +219,13 @@ export default function App() {
           if (data.sleepLogs) state.setSleepLogs(data.sleepLogs);
           if (data.foodWaterLogs) state.setFoodWaterLogs(data.foodWaterLogs);
         }}
+      />
+
+      <EraseDataModal
+        isOpen={isEraseModalOpen}
+        onClose={() => setIsEraseModalOpen(false)}
+        onEraseAll={state.handleClearAllStorage}
+        onRestoreSamples={state.handleRestoreSampleData}
       />
     </div>
   );

@@ -249,16 +249,67 @@ export function useAetherState() {
     setSleepLogs(prev => prev.filter(log => log.id !== id));
   };
 
-  // Erase and Reset All Protocol Data
+  // Erase all data to a clean, empty state
   const handleClearAllStorage = () => {
-    if (window.confirm('Are you sure you want to completely erase all data? This will restore the initial setup.')) {
-      window.localStorage.clear();
-      setTodos(getInitialTodos());
-      setNotes(getInitialNotes());
-      setEvents(getInitialEvents());
-      setFitnessLogs(getInitialFitness());
-      setSleepLogs(getInitialSleep());
-      setFoodWaterLogs(getInitialFoodWater());
+    const emptyTodos: Todo[] = [];
+    const emptyNotes: Note[] = [];
+    const emptyEvents: CalendarEvent[] = [];
+    const emptyFitness: FitnessLog[] = [];
+    const emptySleep: SleepLog[] = [];
+    const todayStr = getTodayDateString();
+    const emptyFoodWater: Record<string, FoodWaterLog> = {
+      [todayStr]: {
+        date: todayStr,
+        waterTarget: 2500,
+        waterIntake: 0,
+        meals: []
+      }
+    };
+
+    setTodos(emptyTodos);
+    setNotes(emptyNotes);
+    setEvents(emptyEvents);
+    setFitnessLogs(emptyFitness);
+    setSleepLogs(emptySleep);
+    setFoodWaterLogs(emptyFoodWater);
+
+    try {
+      window.localStorage.setItem('hub_todos', JSON.stringify(emptyTodos));
+      window.localStorage.setItem('hub_notes', JSON.stringify(emptyNotes));
+      window.localStorage.setItem('hub_events', JSON.stringify(emptyEvents));
+      window.localStorage.setItem('hub_fitness', JSON.stringify(emptyFitness));
+      window.localStorage.setItem('hub_sleep', JSON.stringify(emptySleep));
+      window.localStorage.setItem('hub_food_water', JSON.stringify(emptyFoodWater));
+    } catch (e) {
+      console.warn('Failed to clear local storage:', e);
+    }
+  };
+
+  // Restore initial demonstration sample data
+  const handleRestoreSampleData = () => {
+    const sampleTodos = getInitialTodos();
+    const sampleNotes = getInitialNotes();
+    const sampleEvents = getInitialEvents();
+    const sampleFitness = getInitialFitness();
+    const sampleSleep = getInitialSleep();
+    const sampleFoodWater = getInitialFoodWater();
+
+    setTodos(sampleTodos);
+    setNotes(sampleNotes);
+    setEvents(sampleEvents);
+    setFitnessLogs(sampleFitness);
+    setSleepLogs(sampleSleep);
+    setFoodWaterLogs(sampleFoodWater);
+
+    try {
+      window.localStorage.setItem('hub_todos', JSON.stringify(sampleTodos));
+      window.localStorage.setItem('hub_notes', JSON.stringify(sampleNotes));
+      window.localStorage.setItem('hub_events', JSON.stringify(sampleEvents));
+      window.localStorage.setItem('hub_fitness', JSON.stringify(sampleFitness));
+      window.localStorage.setItem('hub_sleep', JSON.stringify(sampleSleep));
+      window.localStorage.setItem('hub_food_water', JSON.stringify(sampleFoodWater));
+    } catch (e) {
+      console.warn('Failed to restore sample local storage:', e);
     }
   };
 
@@ -315,6 +366,7 @@ export function useAetherState() {
     handleResetFoodWater,
     handleAddSleepLog,
     handleDeleteSleepLog,
-    handleClearAllStorage
+    handleClearAllStorage,
+    handleRestoreSampleData
   };
 }
