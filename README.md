@@ -26,13 +26,13 @@ Aether Hub addresses the problem of fragmented productivity tools by consolidati
 
 ### Core Protocol Modules
 
+| Hydration & Nutrition Tracker | Fitness & Workout Log |
+| :---: | :---: |
+| ![Water Tracker](./screenshots/water-tracker.png) | ![Fitness Tracker](./screenshots/fitness-tracker.png) |
+
 | Task & Habit Tracker | Multi-Format Notes Vault |
 | :---: | :---: |
 | ![Task Tracker](./screenshots/task-tracker.png) | ![Notes Vault](./screenshots/notes-vault.png) |
-
-| Fitness & Workout Log | Hydration & Nutrition Tracker |
-| :---: | :---: |
-| ![Fitness Tracker](./screenshots/fitness-tracker.png) | ![Water Tracker](./screenshots/water-tracker.png) |
 
 | Sleep Recovery Log | Daily Calendar Schedule |
 | :---: | :---: |
